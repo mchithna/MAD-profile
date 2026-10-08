@@ -1,0 +1,146 @@
+React Native + Expo
+Setup Guide for macOS and Windows
+Student-ready step-by-step installation and verification guide
+This guide explains how to install and configure React Native with Expo on macOS and Windows. The recommended beginner workflow uses Node.js LTS, VS Code, Expo Go, and a physical device. Android Studio can be added when an Android emulator or native Android tooling is required. Xcode is required on macOS when an iOS Simulator or local native iOS development is needed.
+1. Recommended Setup
+SoftwaremacOSWindowsPurposeNode.js LTSRequiredRequiredJavaScript runtime and npmVS CodeRecommendedRecommendedDevelopment environmentExpo / create-expo-appRequiredRequiredReact Native development workflowExpo GoRecommendedRecommendedRun the app on a physical phoneAndroid StudioOptional initiallyOptional initiallyAndroid SDK and emulatorXcodeRequired for iOS SimulatorNot availableiOS simulator/native iOS toolingGitRecommendedRecommendedVersion control2. macOS Setup
+Step 1 — Open Terminal
+Press Command + Space, search for Terminal, and open it.
+Step 2 — Check Node.js
+Run: node --version
+Run: npm --version
+If both commands return version numbers, continue. If Node.js is not found, install Node.js LTS.
+Step 3 — Install Node.js LTS
+Open the official Node.js website and download the LTS release.
+Install it using the standard macOS installer.
+Close and reopen Terminal.
+Verify with node --version and npm --version.
+Step 4 — Install VS Code
+Download and install Visual Studio Code.
+Recommended extensions: ESLint, Prettier, React Native Tools, and a React/React Native snippets extension.
+Step 5 — Install Expo Go
+On Android, install Expo Go from Google Play.
+On iPhone, install Expo Go from the App Store.
+Step 6 — Create an Expo project
+Choose a project location, for example: cd Desktop
+Run: npx create-expo-app@latest MyFirstApp
+Follow the prompts and select the recommended/current template.
+Step 7 — Open the project
+Run: cd MyFirstApp
+Run: code .
+If code is not available, open VS Code manually and choose File ? Open Folder.
+Step 8 — Start Expo
+Run: npx expo start
+A development server and QR code should appear.
+Step 9 — Run on a physical phone
+Connect the Mac and phone to the same Wi-Fi network.
+Open Expo Go on the phone.
+Scan the QR code shown by Expo.
+Step 10 — Test Fast Refresh
+Open the main screen file in VS Code.
+Change some text, save the file, and confirm that the app updates automatically.
+3. Windows Setup
+Step 1 — Install Node.js LTS
+Download the LTS version from the official Node.js website.
+Run the Windows installer with the standard options.
+Close and reopen PowerShell after installation.
+Step 2 — Verify Node.js and npm
+Open PowerShell.
+Run: node --version
+Run: npm --version
+Step 3 — Install VS Code
+Download and install Visual Studio Code.
+Recommended extensions: ESLint, Prettier, React Native Tools, and a React/React Native snippets extension.
+Step 4 — Install Expo Go
+Install Expo Go on an Android or iPhone.
+Step 5 — Create an Expo project
+Open PowerShell.
+Run: cd Desktop
+Run: npx create-expo-app@latest MyFirstApp
+Follow the prompts and select the recommended/current template.
+Step 6 — Open the project
+Run: cd MyFirstApp
+Run: code .
+Alternatively open the folder manually in VS Code.
+Step 7 — Start Expo
+Run: npx expo start
+A development server and QR code should appear.
+Step 8 — Run on a physical phone
+Connect the Windows computer and phone to the same Wi-Fi network.
+Open Expo Go and scan the QR code.
+Step 9 — Test Fast Refresh
+Edit the main screen file, save it, and confirm the application updates.
+4. Troubleshooting QR-Code / Network Problems
+If the phone cannot connect to the development server:
+Confirm that the computer and phone are on the same Wi-Fi network.
+Try starting Expo with: npx expo start --tunnel
+Scan the new QR code from Expo Go.
+Avoid restrictive public or institutional networks when possible.
+5. Android Studio and Android Emulator
+Android Studio is not required for the initial Expo Go workflow. Install it when students need an Android emulator, Android SDK tooling, or native Android development.
+Step 1 — Install Android Studio
+Download Android Studio from the official Android Developers website.
+Use the standard installation wizard.
+Step 2 — Verify Android SDK
+Open Android Studio ? SDK Manager.
+Ensure an appropriate Android SDK Platform and required SDK Tools are installed.
+Step 3 — Create an emulator
+Open Android Studio ? Device Manager.
+Choose Create Virtual Device.
+Select a phone model and an available Android system image.
+Finish the wizard and start the virtual device.
+Step 4 — Run the Expo application
+Start the project with: npx expo start
+Press A in the Expo terminal to open the app on an Android emulator.
+6. iOS Simulator on macOS
+Step 1 — Install Xcode
+Install Xcode from the Mac App Store.
+Open Xcode after installation and complete the initial setup.
+Step 2 — Install an iOS Simulator runtime
+Open Xcode ? Settings ? Platforms.
+Install the required iOS Simulator runtime.
+Step 3 — Start the simulator and Expo
+Start the project with: npx expo start
+Press I to open the application in the iOS Simulator.
+7. Essential Expo Commands
+TaskCommandCreate a projectnpx create-expo-app@latest MyFirstAppEnter project foldercd MyFirstAppStart Exponpx expo startStart with tunnelnpx expo start --tunnelInstall an Expo-compatible packagenpx expo install package-nameInstall a normal npm packagenpm install package-name8. Installation Verification Checklist
+macOS
+? Node.js LTS installed and node --version works
+? npm works
+? VS Code installed
+? Expo Go installed on a physical device
+? Expo project created successfully
+? npx expo start works
+? QR code appears
+? Application opens in Expo Go
+? Fast Refresh works
+? Android emulator tested if required
+? Xcode/iOS Simulator configured if iOS Simulator development is required
+Windows
+? Node.js LTS installed and node --version works
+? npm works
+? VS Code installed
+? Expo Go installed on a physical device
+? Expo project created successfully
+? npx expo start works
+? QR code appears
+? Application opens in Expo Go
+? Fast Refresh works
+? Android Studio/emulator tested if required
+9. Final Verification Project
+Every student should be able to complete the following sequence:
+npx create-expo-app@latest TestApp
+cd TestApp
+npx expo start
+The expected outcome is that the Expo development server starts, a QR code is displayed, and the application can be opened in Expo Go or an appropriate emulator/simulator.
+10. Official References
+Expo — Set up your environment: https://docs.expo.dev/get-started/set-up-your-environment/
+Expo — Create a project: https://docs.expo.dev/get-started/create-a-project/
+Expo — Start developing: https://docs.expo.dev/get-started/start-developing/
+Expo — Create your first app: https://docs.expo.dev/tutorial/create-your-first-app/
+React Native — Set Up Your Environment: https://reactnative.dev/docs/set-up-your-environment/
+Node.js: https://nodejs.org/
+Visual Studio Code: https://code.visualstudio.com/
+Android Studio: https://developer.android.com/studio
+Documentation note: Expo documentation was checked on 27 August 2026. Expo currently lists Node.js LTS and supports macOS and Windows. Expo also distinguishes Expo Go, which is useful for students and learners, from development builds for applications requiring custom native mod
+
